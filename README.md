@@ -11,6 +11,8 @@ You can import the extension methods as follows:
 ```javascript
 // Import the LINQ extension methods
 import './linq.js';
+````
+
 After importing the extension methods, you can use them on arrays as if they were built-in methods.
 
 Extension Methods
