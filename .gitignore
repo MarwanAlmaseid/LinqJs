@@ -1,2 +1,26 @@
-/linqExtensions.Test.js
-/package.json
+# Ignore node_modules directory
+node_modules/
+
+# Ignore compiled JavaScript files
+dist/
+
+# Ignore any generated files or directories
+*.js
+*.js.map
+
+# Ignore any editor or IDE specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignore any local environment files
+.env
+
+# Ignore any pnpm specific files
+.pnpm/
+.pnpm-debug.log
+.pnpm-store/
+
+# Ignore any operating system specific files
+.DS_Store
+Thumbs.db
