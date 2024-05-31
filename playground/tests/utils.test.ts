@@ -27,7 +27,7 @@ import {
   range,
   repeat,
   reverse,
-} from '../src/utils';
+} from '../../src/index';
 
 describe('Utility Functions', () => {
 

@@ -1,0 +1,29 @@
+name: Deploy to npm
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build
+        run: npm run build  # Assuming you have a build script
+      
+      - name: Publish to npm
+        run: npm publish --access public  # Adjust options as needed, like --tag next for prereleases
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}  # Make sure to add your NPM_AUTH_TOKEN secret in repository settings
